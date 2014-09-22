@@ -1,0 +1,33 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+}
+
+
+apply plugin: "groovy"
+apply plugin: "maven"
+
+archivesBaseName = "about"
+group = 'org.droidcon'
+version = '0.1.0'
+
+repositories {
+    mavenCentral ()
+}
+
+dependencies {
+    compile gradleApi ()
+    compile 'com.android.tools.build:gradle:0.12.+'
+    testCompile 'commons-io:commons-io:2.4'
+    testCompile 'org.easytesting:fest-assert-core:2.0M10'
+}
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository (url: "file:///$buildDir/m2repo")
+        }
+    }
+}
+

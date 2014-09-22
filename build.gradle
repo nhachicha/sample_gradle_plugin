@@ -1,0 +1,19 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+// todo move this to app so we can have a complete stand alone projects
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:0.12.2'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}

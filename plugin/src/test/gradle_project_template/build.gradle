@@ -1,0 +1,25 @@
+buildscript {
+    repositories {
+        maven {url "file://${projectDir}/../plugin/build/m2repo" }
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:+'
+        classpath 'org.droidcon:about:0.1.0'
+    }
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'about'
+
+repositories {
+    mavenCentral()
+}
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion "19.1.0"
+}
+
+
